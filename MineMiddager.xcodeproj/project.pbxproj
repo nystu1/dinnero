@@ -40,6 +40,7 @@
 		B648F737279B5C09002002B6 /* DinnerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F735279B5C09002002B6 /* DinnerListTableViewCell.swift */; };
 		B648F738279B5C09002002B6 /* DinnerListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B648F736279B5C09002002B6 /* DinnerListTableViewCell.xib */; };
 		B648F73D279B6179002002B6 /* NewDinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F73C279B6179002002B6 /* NewDinnerViewController.swift */; };
+		B65ACA89279F4BE200A2D055 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65ACA88279F4BE200A2D055 /* Firebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		B648F735279B5C09002002B6 /* DinnerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerListTableViewCell.swift; sourceTree = "<group>"; };
 		B648F736279B5C09002002B6 /* DinnerListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinnerListTableViewCell.xib; sourceTree = "<group>"; };
 		B648F73C279B6179002002B6 /* NewDinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDinnerViewController.swift; sourceTree = "<group>"; };
+		B65ACA88279F4BE200A2D055 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		DF9FF5D1054C9C01FD5AE183 /* Pods_MineMiddager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MineMiddager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 			children = (
 				B62E391F279C087000744F4F /* Links.swift */,
 				B6169C36279F2A85004C638B /* UserDefaultKeys.swift */,
+				B65ACA88279F4BE200A2D055 /* Firebase.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				B648F719279B5426002002B6 /* ViewController.swift in Sources */,
 				B648F73D279B6179002002B6 /* NewDinnerViewController.swift in Sources */,
 				B648F715279B5426002002B6 /* AppDelegate.swift in Sources */,
+				B65ACA89279F4BE200A2D055 /* Firebase.swift in Sources */,
 				B6169C20279F0B45004C638B /* String+Extensions.swift in Sources */,
 				B6169C2D279F132F004C638B /* DinneroInjector.swift in Sources */,
 				B6169C35279F1B24004C638B /* RandomDinnerPresenter.swift in Sources */,

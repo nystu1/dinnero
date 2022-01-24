@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="qTG-v5-o6o">
+            <objects>
+                <viewController restorationIdentifier="WebViewController" storyboardIdentifier="WebViewController" id="hGP-OO-5Xn" customClass="WebViewController" customModule="MineMiddager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rMH-kj-BmM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7l-8x-BH1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pGf-2q-JfJ" appends="YES" id="zQ6-5m-Ukd"/>
+                                    <outletCollection property="gestureRecognizers" destination="IGK-m5-86q" appends="YES" id="eYw-e3-sQT"/>
+                                </connections>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o3e-u7-5M2"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I7l-8x-BH1" firstAttribute="top" secondItem="o3e-u7-5M2" secondAttribute="top" id="Ac1-Kc-rHU"/>
+                            <constraint firstItem="o3e-u7-5M2" firstAttribute="trailing" secondItem="I7l-8x-BH1" secondAttribute="trailing" id="IdR-Tj-CY2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="I7l-8x-BH1" secondAttribute="bottom" id="WXR-dW-La7"/>
+                            <constraint firstItem="I7l-8x-BH1" firstAttribute="leading" secondItem="o3e-u7-5M2" secondAttribute="leading" id="edh-ST-Y54"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="I7l-8x-BH1" id="PwT-vL-YEv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XSI-Af-N0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="pGf-2q-JfJ">
+                    <connections>
+                        <action selector="rightSwiped:" destination="hGP-OO-5Xn" id="qqm-YR-c7h"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="IGK-m5-86q">
+                    <connections>
+                        <action selector="leftSwiped:" destination="hGP-OO-5Xn" id="UmD-mZ-8ws"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-65" y="585"/>
+        </scene>
+        <!--Dinner List View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DinnerListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DinnerListViewController" customModule="MineMiddager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cD-7b-v66">
+                                <rect key="frame" x="8" y="831" width="123" height="31"/>
+                                <buttonConfiguration key="configuration" style="plain" title="  Ny middag"/>
+                                <connections>
+                                    <action selector="newDinnerTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UE9-Is-B75"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FP-QE-nDJ">
+                                <rect key="frame" x="282" y="831" width="124" height="31"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Middagsforsalg"/>
+                                <connections>
+                                    <action selector="randomDinnerTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OBD-Zb-jAB"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xI9-vf-ekw">
+                                <rect key="frame" x="8" y="34" width="398" height="789"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="DwG-fR-zHM"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="i7I-Y1-NpL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                        <constraints>
+                            <constraint firstItem="3cD-7b-v66" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="4z5-l6-Fd4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3cD-7b-v66" secondAttribute="bottom" id="D36-CM-guc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6FP-QE-nDJ" secondAttribute="trailing" constant="8" id="DSh-ES-m0Q"/>
+                            <constraint firstItem="xI9-vf-ekw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-10" id="LrE-gk-fNs"/>
+                            <constraint firstItem="6FP-QE-nDJ" firstAttribute="top" secondItem="xI9-vf-ekw" secondAttribute="bottom" constant="8" id="f8o-Kq-gre"/>
+                            <constraint firstItem="6FP-QE-nDJ" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="kdK-3U-Fvx"/>
+                            <constraint firstItem="xI9-vf-ekw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="qLf-Rx-JLi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xI9-vf-ekw" secondAttribute="trailing" constant="8" id="rUo-Eu-Vbe"/>
+                            <constraint firstItem="3cD-7b-v66" firstAttribute="top" secondItem="xI9-vf-ekw" secondAttribute="bottom" constant="8" id="vDl-dr-wkj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addNewDinnerButton" destination="3cD-7b-v66" id="AdQ-b5-ySN"/>
+                        <outlet property="randomDinner" destination="6FP-QE-nDJ" id="Syv-qy-deU"/>
+                        <outlet property="tableView" destination="xI9-vf-ekw" id="aNN-iQ-7qd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="-60"/>
+        </scene>
+        <!--New Dinner View Controller-->
+        <scene sceneID="q1r-RS-Fa3">
+            <objects>
+                <viewController storyboardIdentifier="NewDinnerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rGu-vD-hgM" customClass="NewDinnerViewController" customModule="MineMiddager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1xN-mG-Vqk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="UQX-ic-aGZ">
+                                <rect key="frame" x="16" y="355.5" width="382" height="185"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dinner name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T81-61-xSN" customClass="DinnerTextField" customModule="MineMiddager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="XTQ-RY-n7C"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link to receipe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5g-mU-eyv" customClass="DinnerTextField" customModule="MineMiddager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="77" width="382" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="qEK-HA-uM9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES" textContentType="url"/>
+                                    </textField>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p3i-80-gM5">
+                                        <rect key="frame" x="0.0" y="138" width="165" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legg inn oppskrift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rN-3a-Ctf">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="25"/>
+                                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8P-Zf-caU" customClass="CheckBox" customModule="MineMiddager" customModuleProvider="target">
+                                                <rect key="frame" x="140" y="0.0" width="25" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="dkR-l0-jq6"/>
+                                                    <constraint firstAttribute="width" secondItem="a8P-Zf-caU" secondAttribute="height" multiplier="1:1" id="lDz-MT-kNz"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smy-GH-PkJ">
+                                        <rect key="frame" x="0.0" y="154" width="382" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Add dinner"/>
+                                        <connections>
+                                            <action selector="addDinnerTapped:" destination="rGu-vD-hgM" eventType="touchUpInside" id="Chz-IW-9IQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Smy-GH-PkJ" firstAttribute="width" secondItem="UQX-ic-aGZ" secondAttribute="width" id="6Xe-ny-zcj"/>
+                                    <constraint firstItem="z5g-mU-eyv" firstAttribute="width" secondItem="T81-61-xSN" secondAttribute="width" id="EQO-AF-zoa"/>
+                                    <constraint firstItem="T81-61-xSN" firstAttribute="width" secondItem="UQX-ic-aGZ" secondAttribute="width" id="YEV-WJ-EVc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pRK-fG-Cjg"/>
+                        <color key="backgroundColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UQX-ic-aGZ" firstAttribute="leading" secondItem="pRK-fG-Cjg" secondAttribute="leading" constant="16" id="8QK-P8-eOL"/>
+                            <constraint firstItem="UQX-ic-aGZ" firstAttribute="centerX" secondItem="1xN-mG-Vqk" secondAttribute="centerX" id="9Nd-wB-ulo"/>
+                            <constraint firstItem="pRK-fG-Cjg" firstAttribute="trailing" secondItem="UQX-ic-aGZ" secondAttribute="trailing" constant="16" id="DhG-wP-XfR"/>
+                            <constraint firstItem="UQX-ic-aGZ" firstAttribute="centerY" secondItem="1xN-mG-Vqk" secondAttribute="centerY" id="eKp-o8-UmQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dinnerNameTextField" destination="T81-61-xSN" id="NRt-JD-Pq0"/>
+                        <outlet property="dinnerUrlTextField" destination="z5g-mU-eyv" id="eCs-sC-OmY"/>
+                        <outlet property="submitButton" destination="Smy-GH-PkJ" id="Erh-pf-cqQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdE-MS-tgs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717" y="-60"/>
+        </scene>
+        <!--Random Dinner View Controller-->
+        <scene sceneID="reN-Fr-UUg">
+            <objects>
+                <viewController storyboardIdentifier="RandomDinnerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fq7-mk-EZT" customClass="RandomDinnerViewController" customModule="MineMiddager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jix-La-fuK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Middagsforslag" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCh-Ah-TC0">
+                                <rect key="frame" x="8" y="340.5" width="398" height="35.5"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Dd2-d0-lNp" appends="YES" id="x6L-A3-AEt"/>
+                                </connections>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fdq-8P-F3K">
+                                <rect key="frame" x="79" y="456" width="256" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dD-jX-1qX">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Fra lista"/>
+                                        <connections>
+                                            <action selector="fromListTapped:" destination="Fq7-mk-EZT" eventType="touchUpInside" id="gV0-EU-miI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ie-ms-v86">
+                                        <rect key="frame" x="132" y="0.0" width="124" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Fra oss"/>
+                                        <connections>
+                                            <action selector="fromUsTapped:" destination="Fq7-mk-EZT" eventType="touchUpInside" id="FLS-5U-yRr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Ie-ms-v86" firstAttribute="width" secondItem="1dD-jX-1qX" secondAttribute="width" id="Us1-SZ-RHF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dqD-o7-nCw"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dqD-o7-nCw" firstAttribute="trailing" secondItem="TCh-Ah-TC0" secondAttribute="trailing" constant="8" id="8lF-Zh-t4K"/>
+                            <constraint firstItem="TCh-Ah-TC0" firstAttribute="centerY" secondItem="jix-La-fuK" secondAttribute="centerY" multiplier="0.8" id="NHl-qx-zcH"/>
+                            <constraint firstItem="TCh-Ah-TC0" firstAttribute="centerX" secondItem="jix-La-fuK" secondAttribute="centerX" id="Qum-Oh-ypP"/>
+                            <constraint firstItem="1dD-jX-1qX" firstAttribute="width" secondItem="jix-La-fuK" secondAttribute="width" multiplier="0.3" id="fzs-Ui-mmr"/>
+                            <constraint firstItem="TCh-Ah-TC0" firstAttribute="leading" secondItem="dqD-o7-nCw" secondAttribute="leading" constant="8" id="gDK-Ps-LdJ"/>
+                            <constraint firstItem="Fdq-8P-F3K" firstAttribute="centerX" secondItem="jix-La-fuK" secondAttribute="centerX" id="iug-dP-Fpe"/>
+                            <constraint firstItem="Fdq-8P-F3K" firstAttribute="top" secondItem="TCh-Ah-TC0" secondAttribute="bottom" constant="80" id="ysT-lC-KEd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fromListButton" destination="1dD-jX-1qX" id="2ni-gE-xV7"/>
+                        <outlet property="fromUsButton" destination="6Ie-ms-v86" id="Pg0-Ip-bYF"/>
+                        <outlet property="randomDinnerLabel" destination="TCh-Ah-TC0" id="UL6-vn-Tbv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Otn-ge-YfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Dd2-d0-lNp">
+                    <connections>
+                        <action selector="dinnerLabelTapped:" destination="Fq7-mk-EZT" id="isW-oH-6EO"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="575" y="-60"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="T81-61-xSN">
+            <size key="intrinsicContentSize" width="123" height="34"/>
+        </designable>
+        <designable name="z5g-mU-eyv">
+            <size key="intrinsicContentSize" width="137.5" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		381148B15A3CE01D4DDC2BDD /* Pods_MineMiddager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9FF5D1054C9C01FD5AE183 /* Pods_MineMiddager.framework */; };
+		B6169C20279F0B45004C638B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C1F279F0B45004C638B /* String+Extensions.swift */; };
+		B6169C24279F0C06004C638B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6169C26279F0C06004C638B /* Localizable.strings */; };
+		B6169C29279F0FC3004C638B /* DinnerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C28279F0FC3004C638B /* DinnerListInteractor.swift */; };
+		B6169C2B279F118F004C638B /* DinnerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C2A279F118F004C638B /* DinnerListPresenter.swift */; };
+		B6169C2D279F132F004C638B /* DinneroInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C2C279F132F004C638B /* DinneroInjector.swift */; };
+		B6169C2F279F14CF004C638B /* DinnerListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C2E279F14CF004C638B /* DinnerListRouter.swift */; };
+		B6169C31279F18DF004C638B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6169C30279F18DF004C638B /* GoogleService-Info.plist */; };
+		B6169C33279F1A42004C638B /* RandomDinnerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C32279F1A42004C638B /* RandomDinnerInteractor.swift */; };
+		B6169C35279F1B24004C638B /* RandomDinnerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C34279F1B24004C638B /* RandomDinnerPresenter.swift */; };
+		B6169C37279F2A85004C638B /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C36279F2A85004C638B /* UserDefaultKeys.swift */; };
+		B6169C39279F2BA4004C638B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C38279F2BA4004C638B /* Date+Extensions.swift */; };
+		B62E390F279B6AB300744F4F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E390E279B6AB300744F4F /* WebViewController.swift */; };
+		B62E3912279B71D200744F4F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E3911279B71D200744F4F /* UIColor+Extensions.swift */; };
+		B62E3915279B74A300744F4F /* RealmDinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E3914279B74A300744F4F /* RealmDinner.swift */; };
+		B62E3918279BFD4500744F4F /* DinnerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E3917279BFD4500744F4F /* DinnerTextField.swift */; };
+		B62E391A279BFD4C00744F4F /* DinnerTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = B62E3919279BFD4C00744F4F /* DinnerTextField.xib */; };
+		B62E391D279C05DA00744F4F /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E391C279C05DA00744F4F /* CheckBox.swift */; };
+		B62E3920279C087000744F4F /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E391F279C087000744F4F /* Links.swift */; };
+		B62E3922279C0C5B00744F4F /* UIViewControllers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E3921279C0C5B00744F4F /* UIViewControllers+Extensions.swift */; };
+		B62E3927279C474E00744F4F /* RandomDinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E3926279C474E00744F4F /* RandomDinnerViewController.swift */; };
+		B648F715279B5426002002B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F714279B5426002002B6 /* AppDelegate.swift */; };
+		B648F717279B5426002002B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F716279B5426002002B6 /* SceneDelegate.swift */; };
+		B648F719279B5426002002B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F718279B5426002002B6 /* ViewController.swift */; };
+		B648F71C279B5426002002B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B648F71A279B5426002002B6 /* Main.storyboard */; };
+		B648F71E279B5427002002B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B648F71D279B5427002002B6 /* Assets.xcassets */; };
+		B648F721279B5427002002B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B648F71F279B5427002002B6 /* LaunchScreen.storyboard */; };
+		B648F729279B5527002002B6 /* DinnerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B648F728279B5527002002B6 /* DinnerList.storyboard */; };
+		B648F72E279B56D0002002B6 /* DinnerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F72D279B56D0002002B6 /* DinnerListViewController.swift */; };
+		B648F731279B57BD002002B6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F730279B57BD002002B6 /* MainViewController.swift */; };
+		B648F737279B5C09002002B6 /* DinnerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F735279B5C09002002B6 /* DinnerListTableViewCell.swift */; };
+		B648F738279B5C09002002B6 /* DinnerListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B648F736279B5C09002002B6 /* DinnerListTableViewCell.xib */; };
+		B648F73D279B6179002002B6 /* NewDinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F73C279B6179002002B6 /* NewDinnerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C2CA71294BC85E264F4C9A0 /* Pods-MineMiddager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineMiddager.release.xcconfig"; path = "Target Support Files/Pods-MineMiddager/Pods-MineMiddager.release.xcconfig"; sourceTree = "<group>"; };
+		9E7F63A9C64D431776816E06 /* Pods-MineMiddager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineMiddager.debug.xcconfig"; path = "Target Support Files/Pods-MineMiddager/Pods-MineMiddager.debug.xcconfig"; sourceTree = "<group>"; };
+		B6169C1F279F0B45004C638B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B6169C21279F0BD8004C638B /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Main.strings; sourceTree = "<group>"; };
+		B6169C25279F0C06004C638B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B6169C27279F0C0B004C638B /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B6169C28279F0FC3004C638B /* DinnerListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerListInteractor.swift; sourceTree = "<group>"; };
+		B6169C2A279F118F004C638B /* DinnerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerListPresenter.swift; sourceTree = "<group>"; };
+		B6169C2C279F132F004C638B /* DinneroInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinneroInjector.swift; sourceTree = "<group>"; };
+		B6169C2E279F14CF004C638B /* DinnerListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerListRouter.swift; sourceTree = "<group>"; };
+		B6169C30279F18DF004C638B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B6169C32279F1A42004C638B /* RandomDinnerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDinnerInteractor.swift; sourceTree = "<group>"; };
+		B6169C34279F1B24004C638B /* RandomDinnerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDinnerPresenter.swift; sourceTree = "<group>"; };
+		B6169C36279F2A85004C638B /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		B6169C38279F2BA4004C638B /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		B62E390E279B6AB300744F4F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B62E3911279B71D200744F4F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B62E3914279B74A300744F4F /* RealmDinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDinner.swift; sourceTree = "<group>"; };
+		B62E3917279BFD4500744F4F /* DinnerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerTextField.swift; sourceTree = "<group>"; };
+		B62E3919279BFD4C00744F4F /* DinnerTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinnerTextField.xib; sourceTree = "<group>"; };
+		B62E391C279C05DA00744F4F /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		B62E391F279C087000744F4F /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		B62E3921279C0C5B00744F4F /* UIViewControllers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllers+Extensions.swift"; sourceTree = "<group>"; };
+		B62E3926279C474E00744F4F /* RandomDinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDinnerViewController.swift; sourceTree = "<group>"; };
+		B648F711279B5426002002B6 /* MineMiddager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineMiddager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B648F714279B5426002002B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B648F716279B5426002002B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B648F718279B5426002002B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B648F71B279B5426002002B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B648F71D279B5427002002B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B648F720279B5427002002B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B648F722279B5427002002B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B648F728279B5527002002B6 /* DinnerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DinnerList.storyboard; sourceTree = "<group>"; };
+		B648F72D279B56D0002002B6 /* DinnerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerListViewController.swift; sourceTree = "<group>"; };
+		B648F730279B57BD002002B6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B648F735279B5C09002002B6 /* DinnerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerListTableViewCell.swift; sourceTree = "<group>"; };
+		B648F736279B5C09002002B6 /* DinnerListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinnerListTableViewCell.xib; sourceTree = "<group>"; };
+		B648F73C279B6179002002B6 /* NewDinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDinnerViewController.swift; sourceTree = "<group>"; };
+		DF9FF5D1054C9C01FD5AE183 /* Pods_MineMiddager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MineMiddager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B648F70E279B5426002002B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381148B15A3CE01D4DDC2BDD /* Pods_MineMiddager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2295AF2EF6A63BC3ECFB9F49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E7F63A9C64D431776816E06 /* Pods-MineMiddager.debug.xcconfig */,
+				9C2CA71294BC85E264F4C9A0 /* Pods-MineMiddager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B62E390D279B6A8400744F4F /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B62E390E279B6AB300744F4F /* WebViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		B62E3910279B71C300744F4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B62E3911279B71D200744F4F /* UIColor+Extensions.swift */,
+				B62E3921279C0C5B00744F4F /* UIViewControllers+Extensions.swift */,
+				B6169C1F279F0B45004C638B /* String+Extensions.swift */,
+				B6169C38279F2BA4004C638B /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B62E3913279B748D00744F4F /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				B62E3914279B74A300744F4F /* RealmDinner.swift */,
+			);
+			path = RealmModels;
+			sourceTree = "<group>";
+		};
+		B62E3916279BFD1F00744F4F /* DinnerTextField */ = {
+			isa = PBXGroup;
+			children = (
+				B62E3917279BFD4500744F4F /* DinnerTextField.swift */,
+				B62E3919279BFD4C00744F4F /* DinnerTextField.xib */,
+			);
+			path = DinnerTextField;
+			sourceTree = "<group>";
+		};
+		B62E391B279C05CE00744F4F /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				B62E391C279C05DA00744F4F /* CheckBox.swift */,
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
+		B62E391E279C086600744F4F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B62E391F279C087000744F4F /* Links.swift */,
+				B6169C36279F2A85004C638B /* UserDefaultKeys.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B62E3925279C474100744F4F /* RandomDinner */ = {
+			isa = PBXGroup;
+			children = (
+				B62E3926279C474E00744F4F /* RandomDinnerViewController.swift */,
+				B6169C32279F1A42004C638B /* RandomDinnerInteractor.swift */,
+				B6169C34279F1B24004C638B /* RandomDinnerPresenter.swift */,
+			);
+			path = RandomDinner;
+			sourceTree = "<group>";
+		};
+		B648F708279B5426002002B6 = {
+			isa = PBXGroup;
+			children = (
+				B648F713279B5426002002B6 /* MineMiddager */,
+				B648F712279B5426002002B6 /* Products */,
+				2295AF2EF6A63BC3ECFB9F49 /* Pods */,
+				DFA114A4989D067C308C1535 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B648F712279B5426002002B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B648F711279B5426002002B6 /* MineMiddager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B648F713279B5426002002B6 /* MineMiddager */ = {
+			isa = PBXGroup;
+			children = (
+				B6169C30279F18DF004C638B /* GoogleService-Info.plist */,
+				B62E391E279C086600744F4F /* Constants */,
+				B62E3913279B748D00744F4F /* RealmModels */,
+				B62E3910279B71C300744F4F /* Extensions */,
+				B648F739279B6060002002B6 /* Views */,
+				B648F72B279B56B6002002B6 /* Scenes */,
+				B648F72A279B553C002002B6 /* Storyboards */,
+				B648F714279B5426002002B6 /* AppDelegate.swift */,
+				B648F716279B5426002002B6 /* SceneDelegate.swift */,
+				B648F718279B5426002002B6 /* ViewController.swift */,
+				B648F71D279B5427002002B6 /* Assets.xcassets */,
+				B648F722279B5427002002B6 /* Info.plist */,
+				B6169C26279F0C06004C638B /* Localizable.strings */,
+			);
+			path = MineMiddager;
+			sourceTree = "<group>";
+		};
+		B648F72A279B553C002002B6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B648F71A279B5426002002B6 /* Main.storyboard */,
+				B648F71F279B5427002002B6 /* LaunchScreen.storyboard */,
+				B648F728279B5527002002B6 /* DinnerList.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B648F72B279B56B6002002B6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B62E3925279C474100744F4F /* RandomDinner */,
+				B62E390D279B6A8400744F4F /* WebView */,
+				B648F73B279B615E002002B6 /* NewDinner */,
+				B648F72F279B57AC002002B6 /* Main */,
+				B648F72C279B56BB002002B6 /* DinnerList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B648F72C279B56BB002002B6 /* DinnerList */ = {
+			isa = PBXGroup;
+			children = (
+				B648F732279B5BCF002002B6 /* DinnerListCell */,
+				B648F72D279B56D0002002B6 /* DinnerListViewController.swift */,
+				B6169C28279F0FC3004C638B /* DinnerListInteractor.swift */,
+				B6169C2A279F118F004C638B /* DinnerListPresenter.swift */,
+				B6169C2C279F132F004C638B /* DinneroInjector.swift */,
+				B6169C2E279F14CF004C638B /* DinnerListRouter.swift */,
+			);
+			path = DinnerList;
+			sourceTree = "<group>";
+		};
+		B648F72F279B57AC002002B6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B648F730279B57BD002002B6 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B648F732279B5BCF002002B6 /* DinnerListCell */ = {
+			isa = PBXGroup;
+			children = (
+				B648F735279B5C09002002B6 /* DinnerListTableViewCell.swift */,
+				B648F736279B5C09002002B6 /* DinnerListTableViewCell.xib */,
+			);
+			path = DinnerListCell;
+			sourceTree = "<group>";
+		};
+		B648F739279B6060002002B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B62E391B279C05CE00744F4F /* CheckBox */,
+				B62E3916279BFD1F00744F4F /* DinnerTextField */,
+				B648F73A279B6065002002B6 /* Modals */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B648F73A279B6065002002B6 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		B648F73B279B615E002002B6 /* NewDinner */ = {
+			isa = PBXGroup;
+			children = (
+				B648F73C279B6179002002B6 /* NewDinnerViewController.swift */,
+			);
+			path = NewDinner;
+			sourceTree = "<group>";
+		};
+		DFA114A4989D067C308C1535 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF9FF5D1054C9C01FD5AE183 /* Pods_MineMiddager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B648F710279B5426002002B6 /* MineMiddager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B648F725279B5427002002B6 /* Build configuration list for PBXNativeTarget "MineMiddager" */;
+			buildPhases = (
+				D51A069F9A6411C16515856A /* [CP] Check Pods Manifest.lock */,
+				B648F70D279B5426002002B6 /* Sources */,
+				B648F70E279B5426002002B6 /* Frameworks */,
+				B648F70F279B5426002002B6 /* Resources */,
+				B6169C3C279F315C004C638B /* ShellScript */,
+				53015F830318D03634CC4E97 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MineMiddager;
+			productName = MineMiddager;
+			productReference = B648F711279B5426002002B6 /* MineMiddager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B648F709279B5426002002B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					B648F710279B5426002002B6 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B648F70C279B5426002002B6 /* Build configuration list for PBXProject "MineMiddager" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				nb,
+			);
+			mainGroup = B648F708279B5426002002B6;
+			productRefGroup = B648F712279B5426002002B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B648F710279B5426002002B6 /* MineMiddager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B648F70F279B5426002002B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B648F729279B5527002002B6 /* DinnerList.storyboard in Resources */,
+				B6169C31279F18DF004C638B /* GoogleService-Info.plist in Resources */,
+				B62E391A279BFD4C00744F4F /* DinnerTextField.xib in Resources */,
+				B648F721279B5427002002B6 /* LaunchScreen.storyboard in Resources */,
+				B6169C24279F0C06004C638B /* Localizable.strings in Resources */,
+				B648F738279B5C09002002B6 /* DinnerListTableViewCell.xib in Resources */,
+				B648F71E279B5427002002B6 /* Assets.xcassets in Resources */,
+				B648F71C279B5426002002B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53015F830318D03634CC4E97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MineMiddager/Pods-MineMiddager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MineMiddager/Pods-MineMiddager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MineMiddager/Pods-MineMiddager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6169C3C279F315C004C638B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+		D51A069F9A6411C16515856A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MineMiddager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B648F70D279B5426002002B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B648F72E279B56D0002002B6 /* DinnerListViewController.swift in Sources */,
+				B6169C29279F0FC3004C638B /* DinnerListInteractor.swift in Sources */,
+				B648F719279B5426002002B6 /* ViewController.swift in Sources */,
+				B648F73D279B6179002002B6 /* NewDinnerViewController.swift in Sources */,
+				B648F715279B5426002002B6 /* AppDelegate.swift in Sources */,
+				B6169C20279F0B45004C638B /* String+Extensions.swift in Sources */,
+				B6169C2D279F132F004C638B /* DinneroInjector.swift in Sources */,
+				B6169C35279F1B24004C638B /* RandomDinnerPresenter.swift in Sources */,
+				B648F717279B5426002002B6 /* SceneDelegate.swift in Sources */,
+				B62E3920279C087000744F4F /* Links.swift in Sources */,
+				B6169C2B279F118F004C638B /* DinnerListPresenter.swift in Sources */,
+				B6169C33279F1A42004C638B /* RandomDinnerInteractor.swift in Sources */,
+				B6169C37279F2A85004C638B /* UserDefaultKeys.swift in Sources */,
+				B62E3918279BFD4500744F4F /* DinnerTextField.swift in Sources */,
+				B62E3927279C474E00744F4F /* RandomDinnerViewController.swift in Sources */,
+				B62E3915279B74A300744F4F /* RealmDinner.swift in Sources */,
+				B648F731279B57BD002002B6 /* MainViewController.swift in Sources */,
+				B6169C39279F2BA4004C638B /* Date+Extensions.swift in Sources */,
+				B6169C2F279F14CF004C638B /* DinnerListRouter.swift in Sources */,
+				B62E391D279C05DA00744F4F /* CheckBox.swift in Sources */,
+				B62E3922279C0C5B00744F4F /* UIViewControllers+Extensions.swift in Sources */,
+				B62E390F279B6AB300744F4F /* WebViewController.swift in Sources */,
+				B62E3912279B71D200744F4F /* UIColor+Extensions.swift in Sources */,
+				B648F737279B5C09002002B6 /* DinnerListTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B6169C26279F0C06004C638B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6169C25279F0C06004C638B /* en */,
+				B6169C27279F0C0B004C638B /* nb */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B648F71A279B5426002002B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B648F71B279B5426002002B6 /* Base */,
+				B6169C21279F0BD8004C638B /* nb */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B648F71F279B5427002002B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B648F720279B5427002002B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B648F723279B5427002002B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B648F724279B5427002002B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B648F726279B5427002002B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E7F63A9C64D431776816E06 /* Pods-MineMiddager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GTG68XPAFS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MineMiddager/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Dinnero;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nystuen.Dinnero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B648F727279B5427002002B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C2CA71294BC85E264F4C9A0 /* Pods-MineMiddager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GTG68XPAFS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MineMiddager/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Dinnero;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nystuen.Dinnero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B648F70C279B5426002002B6 /* Build configuration list for PBXProject "MineMiddager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B648F723279B5427002002B6 /* Debug */,
+				B648F724279B5427002002B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B648F725279B5427002002B6 /* Build configuration list for PBXNativeTarget "MineMiddager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B648F726279B5427002002B6 /* Debug */,
+				B648F727279B5427002002B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B648F709279B5426002002B6 /* Project object */;
+}

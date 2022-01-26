@@ -30,6 +30,7 @@ class RandomDinnerViewController: UIViewController {
     }
     
     func setTexts (){
+        randomDinnerLabel.text = "dinner_suggestion".localized()
         fromListButton.setTitle("dinner_suggestion_from_list".localized(), for: .normal)
         fromUsButton.setTitle("dinner_suggestion_from_us".localized(), for: .normal)
     }

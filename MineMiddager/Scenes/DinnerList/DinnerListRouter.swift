@@ -22,6 +22,9 @@ class DinnerListRouter {
         let randomDinnerVc = storyboard.instantiateViewController(withIdentifier: "RandomDinnerViewController") as! RandomDinnerViewController
         randomDinnerVc.delegate = vc
         DinneroInjector.inject(controller: randomDinnerVc, dinners: dinners)
+        if let presentationController = randomDinnerVc.presentationController as? UISheetPresentationController {
+             presentationController.detents = [.medium()]
+         }
         vc?.present(randomDinnerVc, animated: true)
     }
     

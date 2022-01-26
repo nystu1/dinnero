@@ -11,7 +11,7 @@ enum DinneroInjector {
     
     static func inject(controller: RandomDinnerViewController, dinners: [RealmDinner]) {
         let presenter = RandomDinnerPresenter(output: controller)
-        let interactor = RandomDinnerInteractor(output: presenter)
+        let interactor = RandomDinnerInteractor(output: presenter, firebaseService: FirebaseService())
         controller.output = interactor
         controller.dinners = dinners
     }

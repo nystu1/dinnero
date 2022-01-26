@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '14'
+ platform :ios, '15'
 
 target 'MineMiddager' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -9,7 +9,6 @@ target 'MineMiddager' do
   pod 'RealmSwift', '~>10'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
-  pod 'Firebase/Crashlytics'
   pod 'Firebase/Analytics'
 
 

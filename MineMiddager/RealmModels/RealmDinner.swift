@@ -8,7 +8,7 @@ class RealmDinner: Object, Decodable {
         
     convenience init(snapshot: QueryDocumentSnapshot){
         self.init()
-        var snapshotValue = snapshot.data()
+        let snapshotValue = snapshot.data()
         self.name = snapshotValue["name"] as? String
         self.url = snapshotValue["url"] as? String
     }

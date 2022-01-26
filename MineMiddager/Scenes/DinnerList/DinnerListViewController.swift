@@ -22,7 +22,7 @@ class DinnerListViewController: UIViewController {
         DinneroInjector.inject(controller: self)
         output?.viewDidLoad()
         setTexts()
-        setCustomNavigationBar("Dinnero")
+        setCustomNavigationBar("dinnero")
         view.backgroundColor = .twitterBackground
         addNewDinnerButton.tintColor = .twitterLightGray
         randomDinner.tintColor = .twitterLightGray
@@ -77,7 +77,6 @@ extension DinnerListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             output?.removeDinner(at: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }

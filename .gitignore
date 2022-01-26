@@ -91,3 +91,7 @@ iOSInjectionProject/
 
 # Cocoapods
 Pods
+
+
+# DS Store
+.DS_Store

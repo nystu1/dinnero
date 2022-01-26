@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		381148B15A3CE01D4DDC2BDD /* Pods_MineMiddager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9FF5D1054C9C01FD5AE183 /* Pods_MineMiddager.framework */; };
 		B6169C20279F0B45004C638B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C1F279F0B45004C638B /* String+Extensions.swift */; };
 		B6169C24279F0C06004C638B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6169C26279F0C06004C638B /* Localizable.strings */; };
 		B6169C29279F0FC3004C638B /* DinnerListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6169C28279F0FC3004C638B /* DinnerListInteractor.swift */; };
@@ -41,11 +40,15 @@
 		B648F738279B5C09002002B6 /* DinnerListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B648F736279B5C09002002B6 /* DinnerListTableViewCell.xib */; };
 		B648F73D279B6179002002B6 /* NewDinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F73C279B6179002002B6 /* NewDinnerViewController.swift */; };
 		B65ACA89279F4BE200A2D055 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65ACA88279F4BE200A2D055 /* Firebase.swift */; };
+		B6E6143527A1B62000B5B95A /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E6143427A1B62000B5B95A /* FirebaseService.swift */; };
+		B6E6143A27A1BCB700B5B95A /* dinner_suggestions.txt in Sources */ = {isa = PBXBuildFile; fileRef = B6E6143927A1BCB700B5B95A /* dinner_suggestions.txt */; };
+		D41D112BBCFE8229F3A3DF24 /* Pods_MineMiddager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D95A7FEC06417C60378DDDC /* Pods_MineMiddager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C2CA71294BC85E264F4C9A0 /* Pods-MineMiddager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineMiddager.release.xcconfig"; path = "Target Support Files/Pods-MineMiddager/Pods-MineMiddager.release.xcconfig"; sourceTree = "<group>"; };
-		9E7F63A9C64D431776816E06 /* Pods-MineMiddager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineMiddager.debug.xcconfig"; path = "Target Support Files/Pods-MineMiddager/Pods-MineMiddager.debug.xcconfig"; sourceTree = "<group>"; };
+		14015B57E1B917F7C5DE4729 /* Pods-MineMiddager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineMiddager.release.xcconfig"; path = "Target Support Files/Pods-MineMiddager/Pods-MineMiddager.release.xcconfig"; sourceTree = "<group>"; };
+		2D95A7FEC06417C60378DDDC /* Pods_MineMiddager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MineMiddager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C779C2A2F1BF7EF4696B483 /* Pods-MineMiddager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineMiddager.debug.xcconfig"; path = "Target Support Files/Pods-MineMiddager/Pods-MineMiddager.debug.xcconfig"; sourceTree = "<group>"; };
 		B6169C1F279F0B45004C638B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B6169C21279F0BD8004C638B /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Main.strings; sourceTree = "<group>"; };
 		B6169C25279F0C06004C638B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -83,7 +86,10 @@
 		B648F736279B5C09002002B6 /* DinnerListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinnerListTableViewCell.xib; sourceTree = "<group>"; };
 		B648F73C279B6179002002B6 /* NewDinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDinnerViewController.swift; sourceTree = "<group>"; };
 		B65ACA88279F4BE200A2D055 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
-		DF9FF5D1054C9C01FD5AE183 /* Pods_MineMiddager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MineMiddager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E6143127A1B4B700B5B95A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B6E6143227A1B4BF00B5B95A /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B6E6143427A1B62000B5B95A /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		B6E6143927A1BCB700B5B95A /* dinner_suggestions.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = dinner_suggestions.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381148B15A3CE01D4DDC2BDD /* Pods_MineMiddager.framework in Frameworks */,
+				D41D112BBCFE8229F3A3DF24 /* Pods_MineMiddager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +107,18 @@
 		2295AF2EF6A63BC3ECFB9F49 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9E7F63A9C64D431776816E06 /* Pods-MineMiddager.debug.xcconfig */,
-				9C2CA71294BC85E264F4C9A0 /* Pods-MineMiddager.release.xcconfig */,
+				6C779C2A2F1BF7EF4696B483 /* Pods-MineMiddager.debug.xcconfig */,
+				14015B57E1B917F7C5DE4729 /* Pods-MineMiddager.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9FA8D48732E6FB4EDC74B2A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D95A7FEC06417C60378DDDC /* Pods_MineMiddager.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B62E390D279B6A8400744F4F /* WebView */ = {
@@ -164,6 +178,7 @@
 		B62E3925279C474100744F4F /* RandomDinner */ = {
 			isa = PBXGroup;
 			children = (
+				B6E6143927A1BCB700B5B95A /* dinner_suggestions.txt */,
 				B62E3926279C474E00744F4F /* RandomDinnerViewController.swift */,
 				B6169C32279F1A42004C638B /* RandomDinnerInteractor.swift */,
 				B6169C34279F1B24004C638B /* RandomDinnerPresenter.swift */,
@@ -177,7 +192,7 @@
 				B648F713279B5426002002B6 /* MineMiddager */,
 				B648F712279B5426002002B6 /* Products */,
 				2295AF2EF6A63BC3ECFB9F49 /* Pods */,
-				DFA114A4989D067C308C1535 /* Frameworks */,
+				9FA8D48732E6FB4EDC74B2A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,11 +207,13 @@
 		B648F713279B5426002002B6 /* MineMiddager */ = {
 			isa = PBXGroup;
 			children = (
+				B6E6143627A1BA1D00B5B95A /* DinnerSuggestions */,
 				B6169C30279F18DF004C638B /* GoogleService-Info.plist */,
 				B62E391E279C086600744F4F /* Constants */,
 				B62E3913279B748D00744F4F /* RealmModels */,
 				B62E3910279B71C300744F4F /* Extensions */,
 				B648F739279B6060002002B6 /* Views */,
+				B6E6143327A1B61200B5B95A /* Services */,
 				B648F72B279B56B6002002B6 /* Scenes */,
 				B648F72A279B553C002002B6 /* Storyboards */,
 				B648F714279B5426002002B6 /* AppDelegate.swift */,
@@ -286,12 +303,19 @@
 			path = NewDinner;
 			sourceTree = "<group>";
 		};
-		DFA114A4989D067C308C1535 /* Frameworks */ = {
+		B6E6143327A1B61200B5B95A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DF9FF5D1054C9C01FD5AE183 /* Pods_MineMiddager.framework */,
+				B6E6143427A1B62000B5B95A /* FirebaseService.swift */,
 			);
-			name = Frameworks;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B6E6143627A1BA1D00B5B95A /* DinnerSuggestions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DinnerSuggestions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,12 +325,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B648F725279B5427002002B6 /* Build configuration list for PBXNativeTarget "MineMiddager" */;
 			buildPhases = (
-				D51A069F9A6411C16515856A /* [CP] Check Pods Manifest.lock */,
+				68F491525122FEA9995E9306 /* [CP] Check Pods Manifest.lock */,
 				B648F70D279B5426002002B6 /* Sources */,
 				B648F70E279B5426002002B6 /* Frameworks */,
 				B648F70F279B5426002002B6 /* Resources */,
-				B6169C3C279F315C004C638B /* ShellScript */,
-				53015F830318D03634CC4E97 /* [CP] Embed Pods Frameworks */,
+				12637A61C0C02C3520634115 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,6 +363,8 @@
 				en,
 				Base,
 				nb,
+				sv,
+				da,
 			);
 			mainGroup = B648F708279B5426002002B6;
 			productRefGroup = B648F712279B5426002002B6 /* Products */;
@@ -370,9 +395,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		53015F830318D03634CC4E97 /* [CP] Embed Pods Frameworks */ = {
+		12637A61C0C02C3520634115 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -387,24 +412,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MineMiddager/Pods-MineMiddager-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B6169C3C279F315C004C638B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
-		};
-		D51A069F9A6411C16515856A /* [CP] Check Pods Manifest.lock */ = {
+		68F491525122FEA9995E9306 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -435,6 +443,7 @@
 			files = (
 				B648F72E279B56D0002002B6 /* DinnerListViewController.swift in Sources */,
 				B6169C29279F0FC3004C638B /* DinnerListInteractor.swift in Sources */,
+				B6E6143A27A1BCB700B5B95A /* dinner_suggestions.txt in Sources */,
 				B648F719279B5426002002B6 /* ViewController.swift in Sources */,
 				B648F73D279B6179002002B6 /* NewDinnerViewController.swift in Sources */,
 				B648F715279B5426002002B6 /* AppDelegate.swift in Sources */,
@@ -453,6 +462,7 @@
 				B648F731279B57BD002002B6 /* MainViewController.swift in Sources */,
 				B6169C39279F2BA4004C638B /* Date+Extensions.swift in Sources */,
 				B6169C2F279F14CF004C638B /* DinnerListRouter.swift in Sources */,
+				B6E6143527A1B62000B5B95A /* FirebaseService.swift in Sources */,
 				B62E391D279C05DA00744F4F /* CheckBox.swift in Sources */,
 				B62E3922279C0C5B00744F4F /* UIViewControllers+Extensions.swift in Sources */,
 				B62E390F279B6AB300744F4F /* WebViewController.swift in Sources */,
@@ -469,6 +479,8 @@
 			children = (
 				B6169C25279F0C06004C638B /* en */,
 				B6169C27279F0C0B004C638B /* nb */,
+				B6E6143127A1B4B700B5B95A /* sv */,
+				B6E6143227A1B4BF00B5B95A /* da */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -614,7 +626,7 @@
 		};
 		B648F726279B5427002002B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E7F63A9C64D431776816E06 /* Pods-MineMiddager.debug.xcconfig */;
+			baseConfigurationReference = 6C779C2A2F1BF7EF4696B483 /* Pods-MineMiddager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -644,10 +656,11 @@
 		};
 		B648F727279B5427002002B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C2CA71294BC85E264F4C9A0 /* Pods-MineMiddager.release.xcconfig */;
+			baseConfigurationReference = 14015B57E1B917F7C5DE4729 /* Pods-MineMiddager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GTG68XPAFS;
@@ -666,6 +679,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nystuen.Dinnero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

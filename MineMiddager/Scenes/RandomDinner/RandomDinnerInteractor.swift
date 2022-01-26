@@ -1,6 +1,5 @@
 import UIKit
-import Firebase
-import FirebaseFirestore
+
 
 protocol RandomDinnerInteractorOutput {
     func dinnerSuggestionsFetched(dinners: [RealmDinner])
@@ -8,22 +7,19 @@ protocol RandomDinnerInteractorOutput {
 
 class RandomDinnerInteractor: RandomDinnerViewControllerOutput {
     var output: RandomDinnerInteractorOutput?
-    var database: Firestore?
+    var firebaseService: FirebaseService?
     
     var dinners: [RealmDinner] = []
     
-    init(output: RandomDinnerInteractorOutput, database: Firestore = Firestore.firestore()) {
+    init(output: RandomDinnerInteractorOutput, firebaseService: FirebaseService) {
         self.output = output
-        self.database = database
+        self.firebaseService = firebaseService
     }
     
     func fetchDinnerSuggestions() {
         if dinners.isEmpty {
-            database?.collection(FirebaseConstants.dinnerSuggestionsCollection()).getDocuments(completion: { [weak self] snapshot, error in
-                guard let documents = snapshot?.documents, error == nil else { return }
-                documents.forEach{ self?.dinners.append(RealmDinner(snapshot: $0)) }
-                guard let dinners = self?.dinners else { return }
-                self?.output?.dinnerSuggestionsFetched(dinners: dinners)
+            firebaseService?.fetchDinnerSuggestions(completion: { dinners in
+                self.output?.dinnerSuggestionsFetched(dinners: dinners)
             })
         }
     }

@@ -265,14 +265,6 @@
             <point key="canvasLocation" x="575" y="-60"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="T81-61-xSN">
-            <size key="intrinsicContentSize" width="123" height="34"/>
-        </designable>
-        <designable name="z5g-mU-eyv">
-            <size key="intrinsicContentSize" width="137.5" height="34"/>
-        </designable>
-    </designables>
     <resources>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

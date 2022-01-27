@@ -1,10 +1,12 @@
 import UIKit
 import RealmSwift
+import SwipeCellKit
 
 protocol DinnerListViewControllerOutput {
     func viewDidLoad()
     func newDinnerAdded(name: String, url: String?)
     func removeDinner(at: Int)
+    func addUrlToDinner(at: Int, url: String)
 }
 
 class DinnerListViewController: UIViewController {
@@ -58,7 +60,49 @@ extension DinnerListViewController: NewDinnerViewControllerDelegate, RandomDinne
     }
 }
 
-extension DinnerListViewController: UITableViewDelegate, UITableViewDataSource {
+extension DinnerListViewController: UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+
+        let deleteAction = SwipeAction(style: .destructive, title: "delete".localized()) { action, indexPath in
+            self.output?.removeDinner(at: indexPath.row)
+        }
+        
+        let addUrlAction = SwipeAction(style: .default, title: "add_url".localized()) { action, indexPath in
+            self.hideSwipe(at: indexPath.row)
+            //Variable to store alertTextField
+              var textField = UITextField()
+              
+            let alert = UIAlertController(title: "add_url".localized(), message: "", preferredStyle: .alert)
+              alert.addTextField { alertTextField in
+                  alertTextField.placeholder = "paste_url".localized()
+                  textField = alertTextField
+              }
+              
+            let addAction = UIAlertAction(title: "add".localized(), style: .default) { action in
+                  if let text = textField.text {
+                      self.output?.addUrlToDinner(at: indexPath.row, url: text)
+                  }
+              }
+            
+            let cancelAction = UIAlertAction(title: "cancel".localized(), style: .default) { action in
+                if let text = textField.text {
+                    self.hideSwipe(at: indexPath.row)
+                    self.dismiss(animated: true)
+                }
+            }
+            alert.addAction(cancelAction)
+            alert.addAction(addAction)
+
+            self.present(alert, animated: true, completion: nil)
+        }
+
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "delete")
+
+        return [deleteAction, addUrlAction]
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         openDinnerUrl(dinner: dinners[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
@@ -71,15 +115,8 @@ extension DinnerListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DinnerListTableViewCell", for: indexPath) as! DinnerListTableViewCell
         cell.configure(dinner: dinners[indexPath.row])
+        cell.delegate = self
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            output?.removeDinner(at: indexPath.row)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
     }
 }
 
@@ -87,6 +124,32 @@ extension DinnerListViewController: DinnerListPresenterOutput {
     func updateDinnerTable(dinners: [RealmDinner]) {
         self.dinners = dinners
         tableView.reloadData()
+        
+        if !UserDefaults.standard.bool(forKey: Defaults.hasSeenDeleteFunctionality) {
+            if let cell = tableView.cellForRow(at: IndexPath(row: dinners.count - 1, section: 0)) as? SwipeTableViewCell {
+                showSwipe(at: dinners.count - 1, delay: .now() + 1)
+                UserDefaults.standard.set(true, forKey: Defaults.hasSeenDeleteFunctionality)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                    cell.hideSwipe(animated: true)
+                }
+            }
+        }
+    }
+    
+    func showSwipe(at row: Int, delay: DispatchTime = .now()) {
+        if let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0)) as? SwipeTableViewCell {
+            DispatchQueue.main.asyncAfter(deadline: delay) {
+                cell.showSwipe(orientation: .right, animated: true)
+            }
+        }
+    }
+    
+    func hideSwipe(at row: Int, delay: DispatchTime = .now()) {
+        if let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0)) as? SwipeTableViewCell {
+            DispatchQueue.main.asyncAfter(deadline: delay) {
+                cell.hideSwipe(animated: true)
+            }
+        }
     }
 
 }

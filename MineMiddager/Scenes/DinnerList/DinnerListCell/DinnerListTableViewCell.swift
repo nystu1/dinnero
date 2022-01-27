@@ -1,13 +1,7 @@
-//
-//  DinnerListTableViewCell.swift
-//  MineMiddager
-//
-//  Created by Ådne Nystuen on 21/01/2022.
-//
-
 import UIKit
+import SwipeCellKit
 
-class DinnerListTableViewCell: UITableViewCell {
+class DinnerListTableViewCell: SwipeTableViewCell {
 
     let identifier = "DinnerListTableViewCell"
     

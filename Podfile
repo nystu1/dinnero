@@ -6,10 +6,11 @@ target 'MineMiddager' do
   use_frameworks!
 
   # Pods for MineMiddager
-  pod 'RealmSwift', '~>10'
+  pod 'RealmSwift'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
+  pod 'SwipeCellKit'
 
 
 

@@ -9,3 +9,8 @@
 "defaultDinnerSuggestionOne" = "Chili con carne";
 "defaultDinnerSuggestionTwo" = "Fajitas";
 "url_copied" = "Copied";
+"delete" = "Delete";
+"add_url" = "Add URL";
+"paste_url" = "Paste URL";
+"add" = "Add";
+"cancel" = "Cancel";

@@ -8,4 +8,9 @@
 "recipe" = "opskrift";
 "defaultDinnerSuggestionOne" = "Chili con carne";
 "defaultDinnerSuggestionTwo" = "Fajitas";
-
+"url_copied" = "Kopieret";
+"delete" = "Slet";
+"add_url" = "Tilføj URL";
+"paste_url" = "Indsæt URL";
+"add" = "Tilføj";
+"cancel" = "Annuller";

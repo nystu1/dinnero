@@ -28,13 +28,6 @@ class NewDinnerViewController: UIViewController {
     @IBAction func addDinnerTapped(_ sender: Any) {
         guard let dinnerName = dinnerNameTextField.text, !dinnerName.isEmpty else { return }
         var urlString = dinnerUrlTextField.text ?? ""
-//        if let urlString = dinnerUrlTextField.text,
-//            let url = URL(string:urlString),
-//           UIApplication.shared.canOpenURL(url) {
-//            delegate?.newDinnerAdded(name: dinnerName, url: urlString)
-//        } else {
-//            delegate?.newDinnerAdded(name: dinnerName, url: "")
-//        }
         
         if !urlString.isEmpty &&
         (!urlString.hasPrefix("https://") && !urlString.hasPrefix("http://")) {

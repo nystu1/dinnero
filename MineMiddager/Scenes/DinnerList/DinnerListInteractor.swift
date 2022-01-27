@@ -27,6 +27,11 @@ class DinnerListInteractor: DinnerListViewControllerOutput {
             UserDefaults.standard.set(true, forKey: Defaults.initialDinnerSuggestionsHasBeenAdded)
             if dinners.isEmpty {
                 dinners = getInitialDinnerSuggestions()
+                for dinner in dinners {
+                    try! realm.write {
+                        realm.add(dinner)
+                    }
+                }
             }
         }
         
@@ -34,15 +39,37 @@ class DinnerListInteractor: DinnerListViewControllerOutput {
     }
 
     func newDinnerAdded(name: String, url: String?) {
-        let dinner = RealmDinner()
-        dinner.name = name
-        dinner.url = url
-        
+        let dinner = RealmDinner(name: name, url: url)
+
         try! realm.write {
             realm.add(dinner)
             dinners.append(dinner)
         }
         
+        output?.updateDinnerTable(dinners: dinners)
+    }
+    
+    func addUrlToDinner(at: Int, url: String) {
+        var urlString = url
+        let dinner = dinners[at]
+        
+        if !urlString.isEmpty &&
+        (!urlString.hasPrefix("https://") && !urlString.hasPrefix("http://")) {
+            urlString = "https://\(urlString)"
+        }
+        
+        if let url = URL(string:urlString), UIApplication.shared.canOpenURL(url) {
+            try! realm.write {
+                dinner.url = urlString
+                dinners[at] = dinner
+            }
+        } else {
+            try! realm.write {
+                dinner.url = ""
+                dinners[at] = dinner
+            }
+        }
+    
         output?.updateDinnerTable(dinners: dinners)
     }
 

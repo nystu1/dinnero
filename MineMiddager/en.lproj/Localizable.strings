@@ -6,4 +6,6 @@
 "dinner_suggestion_from_list" = "From list";
 "dinner_suggestion_from_us" = "From Dinnero";
 "recipe" = "recipe";
-
+"defaultDinnerSuggestionOne" = "Chili con carne";
+"defaultDinnerSuggestionTwo" = "Fajitas";
+"url_copied" = "Copied";

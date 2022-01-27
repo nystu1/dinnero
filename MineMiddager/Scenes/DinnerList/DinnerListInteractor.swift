@@ -22,6 +22,14 @@ class DinnerListInteractor: DinnerListViewControllerOutput {
     
     func viewDidLoad() {
         dinners = Array(realm.objects(RealmDinner.self))
+        
+        if(!UserDefaults.standard.bool(forKey: Defaults.initialDinnerSuggestionsHasBeenAdded)){
+            UserDefaults.standard.set(true, forKey: Defaults.initialDinnerSuggestionsHasBeenAdded)
+            if dinners.isEmpty {
+                dinners = getInitialDinnerSuggestions()
+            }
+        }
+        
         output?.updateDinnerTable(dinners: dinners)
     }
 
@@ -44,5 +52,12 @@ class DinnerListInteractor: DinnerListViewControllerOutput {
             dinners.remove(at: at)
         }
         output?.updateDinnerTable(dinners: dinners)
+    }
+    
+    private func getInitialDinnerSuggestions() -> [RealmDinner] {
+        let initialDinners = [ "defaultDinnerSuggestionOne".localized(),"defaultDinnerSuggestionTwo".localized()]
+        return initialDinners.map({
+            RealmDinner(name: $0)
+        })
     }
 }

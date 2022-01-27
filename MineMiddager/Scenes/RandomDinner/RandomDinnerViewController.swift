@@ -27,6 +27,7 @@ class RandomDinnerViewController: UIViewController {
         output?.fetchDinnerSuggestions()
         setTexts()
         view.backgroundColor = .twitterBackground
+        fromListButton.isEnabled = !dinners.isEmpty
     }
     
     func setTexts (){

@@ -66,21 +66,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cD-7b-v66">
-                                <rect key="frame" x="8" y="826" width="123" height="31"/>
+                                <rect key="frame" x="8" y="821" width="123" height="31"/>
                                 <buttonConfiguration key="configuration" style="plain" title="  Ny middag"/>
                                 <connections>
                                     <action selector="newDinnerTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UE9-Is-B75"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FP-QE-nDJ">
-                                <rect key="frame" x="282" y="826" width="124" height="41"/>
+                                <rect key="frame" x="282" y="821" width="124" height="31"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Middagsforsalg"/>
                                 <connections>
                                     <action selector="randomDinnerTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OBD-Zb-jAB"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xI9-vf-ekw">
-                                <rect key="frame" x="8" y="34" width="398" height="784"/>
+                                <rect key="frame" x="8" y="34" width="398" height="779"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="DwG-fR-zHM"/>
@@ -92,11 +92,11 @@
                         <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                         <constraints>
                             <constraint firstItem="3cD-7b-v66" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="4z5-l6-Fd4"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3cD-7b-v66" secondAttribute="bottom" constant="5" id="D36-CM-guc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3cD-7b-v66" secondAttribute="bottom" constant="10" id="D36-CM-guc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6FP-QE-nDJ" secondAttribute="trailing" constant="8" id="DSh-ES-m0Q"/>
+                            <constraint firstItem="6FP-QE-nDJ" firstAttribute="height" secondItem="3cD-7b-v66" secondAttribute="height" id="FP0-IP-KZI"/>
                             <constraint firstItem="xI9-vf-ekw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-10" id="LrE-gk-fNs"/>
                             <constraint firstItem="6FP-QE-nDJ" firstAttribute="top" secondItem="xI9-vf-ekw" secondAttribute="bottom" constant="8" id="f8o-Kq-gre"/>
-                            <constraint firstItem="6FP-QE-nDJ" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="5" id="kdK-3U-Fvx"/>
                             <constraint firstItem="xI9-vf-ekw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="qLf-Rx-JLi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xI9-vf-ekw" secondAttribute="trailing" constant="8" id="rUo-Eu-Vbe"/>
                             <constraint firstItem="3cD-7b-v66" firstAttribute="top" secondItem="xI9-vf-ekw" secondAttribute="bottom" constant="8" id="vDl-dr-wkj"/>

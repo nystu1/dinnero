@@ -6,4 +6,6 @@
 "dinner_suggestion_from_list" = "Fra listen";
 "dinner_suggestion_from_us" = "Fra Dinnero";
 "recipe" = "opskrift";
+"defaultDinnerSuggestionOne" = "Chili con carne";
+"defaultDinnerSuggestionTwo" = "Fajitas";
 

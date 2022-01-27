@@ -6,4 +6,6 @@
 "dinner_suggestion_from_list" = "Fra lista";
 "dinner_suggestion_from_us" = "Fra Dinnero";
 "recipe" = "oppskrift";
-
+"defaultDinnerSuggestionOne" = "Chili con carne";
+"defaultDinnerSuggestionTwo" = "Fajitas";
+"url_copied" = "Kopiert";

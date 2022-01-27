@@ -39,6 +39,7 @@
 		B648F737279B5C09002002B6 /* DinnerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F735279B5C09002002B6 /* DinnerListTableViewCell.swift */; };
 		B648F738279B5C09002002B6 /* DinnerListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B648F736279B5C09002002B6 /* DinnerListTableViewCell.xib */; };
 		B648F73D279B6179002002B6 /* NewDinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648F73C279B6179002002B6 /* NewDinnerViewController.swift */; };
+		B6555A2227A2BD9F0063B09F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6555A2127A2BD9F0063B09F /* UIImage+Extensions.swift */; };
 		B65ACA89279F4BE200A2D055 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65ACA88279F4BE200A2D055 /* Firebase.swift */; };
 		B6E6143527A1B62000B5B95A /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E6143427A1B62000B5B95A /* FirebaseService.swift */; };
 		B6E6143A27A1BCB700B5B95A /* dinner_suggestions.txt in Sources */ = {isa = PBXBuildFile; fileRef = B6E6143927A1BCB700B5B95A /* dinner_suggestions.txt */; };
@@ -85,6 +86,7 @@
 		B648F735279B5C09002002B6 /* DinnerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerListTableViewCell.swift; sourceTree = "<group>"; };
 		B648F736279B5C09002002B6 /* DinnerListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinnerListTableViewCell.xib; sourceTree = "<group>"; };
 		B648F73C279B6179002002B6 /* NewDinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDinnerViewController.swift; sourceTree = "<group>"; };
+		B6555A2127A2BD9F0063B09F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		B65ACA88279F4BE200A2D055 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		B6E6143127A1B4B700B5B95A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6E6143227A1B4BF00B5B95A /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				B62E3921279C0C5B00744F4F /* UIViewControllers+Extensions.swift */,
 				B6169C1F279F0B45004C638B /* String+Extensions.swift */,
 				B6169C38279F2BA4004C638B /* Date+Extensions.swift */,
+				B6555A2127A2BD9F0063B09F /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				B648F72E279B56D0002002B6 /* DinnerListViewController.swift in Sources */,
 				B6169C29279F0FC3004C638B /* DinnerListInteractor.swift in Sources */,
 				B6E6143A27A1BCB700B5B95A /* dinner_suggestions.txt in Sources */,
+				B6555A2227A2BD9F0063B09F /* UIImage+Extensions.swift in Sources */,
 				B648F719279B5426002002B6 /* ViewController.swift in Sources */,
 				B648F73D279B6179002002B6 /* NewDinnerViewController.swift in Sources */,
 				B648F715279B5426002002B6 /* AppDelegate.swift in Sources */,
